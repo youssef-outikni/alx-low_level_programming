@@ -13,20 +13,16 @@ int main(void)
 
 	while (i < 10)
 	{
-		while (j < 10)
+		putchar(i + '0');
+		if (i != 9)
 		{
-			putchar(i);
-			putchar(j + '0');
-			if (j != 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			j++;
+			putchar(',');
+			putchar(' ');
 		}
 
 		i++;
 	}
+	putchar('\n');
 
 	return (0);
 }
