@@ -6,14 +6,9 @@
  * Return: Always 0 (Success)
  */
 
-char print_alphabet(void);
 
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 
+#include <unistd.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -26,3 +21,14 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+
+
+char print_alphabet(void);
+
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
+
