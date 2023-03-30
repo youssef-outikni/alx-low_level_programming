@@ -7,18 +7,20 @@
  * Return: void
  */
 
-char *_strcat(char *dest, char *src) {
+char *_strcat(char *dest, char *src)
+{
 	char *dest_ptr = dest;
-	
-	while (*dest_ptr) {
-	    dest_ptr++;
+
+	while (*dest_ptr)
+	{
+		dest_ptr++;
 	}
 
-	while (*src) {
-	    *dest_ptr++ = *src++;
+	while (*src)
+	{
+		*dest_ptr++ = *src++;
 	}
 
 	*dest_ptr = '\0';
-	
-	return dest;
+	return (dest);
 }
