@@ -9,5 +9,5 @@ int _strlen(char *s)
 {
 	int c = sizeof(*s);
 
-	return 	(c/4);
+	return (c);
 }
