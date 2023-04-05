@@ -11,7 +11,8 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
 	char *a_init = accept;
-	unsigned int m; 
+	unsigned int m;
+
 	while (*s != '\0')
 	{
 		m = i;
@@ -23,11 +24,10 @@ unsigned int _strspn(char *s, char *accept)
 			}
 			accept++;
 		}
-		if(m==i)
+		if (m == i)
 		{
 			return (i);
 		}
-		
 		accept = a_init;
 		s++;
 	}
