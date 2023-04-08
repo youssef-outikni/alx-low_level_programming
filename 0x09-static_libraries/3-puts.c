@@ -7,7 +7,7 @@
  * Return: length of the string
  */
 
-int _strlen(char *s)
+void _puts(char *s)
 {
 	int c = 0;
 
@@ -16,6 +16,4 @@ int _strlen(char *s)
 		c++;
 		s++;
 	}
-
-	return (c);
 }
