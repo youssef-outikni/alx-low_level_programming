@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LIBNAME="my"
+LIBNAME="all"
 
 gcc -c *.c
 
