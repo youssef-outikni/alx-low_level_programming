@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
 	while (1 - argc--)
 	{
-		if (atoi(argv[argc]) == 0)
+		if (!_isdigit((int)*argv[argc]))
 		{
 			printf("Error\n");
 			return (0);
@@ -25,4 +25,26 @@ int main(int argc, char **argv)
 	printf("%d", sum);
 	printf("\n");
 	return (0);
+}
+
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * _isdigit - checks if a character is digit
+ * @c: the character to check
+ *
+ * Return: 1 if the character is digit, 0 otherwise
+ */
+
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
