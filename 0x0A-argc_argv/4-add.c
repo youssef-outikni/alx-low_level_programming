@@ -22,13 +22,9 @@ int main(int argc, char **argv)
 		}
 		sum = sum + atoi(argv[argc]);
 	}
-	printf("%d", sum);
-	printf("\n");
+	printf("%d\n", sum);
 	return (0);
 }
-
-#include <stdio.h>
-#include "main.h"
 
 /**
  * _isdigit - checks if a character is digit
