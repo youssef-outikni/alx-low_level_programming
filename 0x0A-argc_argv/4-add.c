@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 		if (!_isdigit((int)*argv[argc]))
 		{
 			printf("Error\n");
-			return (0);
+			return (1);
 		}
 		sum = sum + atoi(argv[argc]);
 	}
