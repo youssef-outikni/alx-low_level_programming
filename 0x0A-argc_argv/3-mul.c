@@ -9,9 +9,9 @@
  */
 int main(int argc, char **argv)
 {
-	if (argc != 2)
+	if (argc != 3)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (0);
 	}
 	printf("%d\n", *argv[0] * *argv[1]);
