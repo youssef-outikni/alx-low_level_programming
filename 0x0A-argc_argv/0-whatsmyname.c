@@ -3,11 +3,15 @@
 
 /**
  * main - check the code
- *
+ * @argc: input value.
+ * @argv: input value.
  * Return: Always 0.
  */
 int main(int argc, char **argv)
 {
-       	__putchar(argv[0]);
+	while (argc--)
+	{
+		printf("%s\n",*argv++);
+	}
 	return (0);
 }
