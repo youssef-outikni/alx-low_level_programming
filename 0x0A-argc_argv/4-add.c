@@ -11,18 +11,18 @@
 int main(int argc, char **argv)
 {
 	int sum = 0;
+	int i = 0;
 
-
-	while (1 - argc--)
+	while (++i < argc)
 	{
-		int c = (int)*argv[argc];
+		int c = (int)*argv[i];
 
 		if (c < 48 || c > 57)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum = sum + atoi(argv[argc]);
+		sum = sum + atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
