@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - check the code
@@ -9,11 +10,18 @@
  */
 int main(int argc, char **argv)
 {
+	int prod = 1;
+
 	if (argc != 3)
 	{
-		printf("Error\n");
+		printf("Error");
 		return (0);
 	}
-	printf("%d\n", *argv[0] * *argv[1]);
+	while (1 - argc--)
+	{
+		prod = prod * atoi(argv[argc]);
+	}
+	printf("%d", prod);
+	printf("\n");
 	return (0);
 }
