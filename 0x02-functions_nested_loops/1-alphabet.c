@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: nothing (Success)
  */
-int main(void)
+
+void print_alphabet(void)
 {
 	char text[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
@@ -14,8 +15,5 @@ int main(void)
 	{
 		putchar(text[i]);
 	}
-
 	putchar('\n');
-
-	return (0);
 }
