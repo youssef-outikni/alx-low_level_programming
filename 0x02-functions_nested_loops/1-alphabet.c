@@ -1,22 +1,21 @@
+#include <stdio.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
-
-char print_alphabet(void)
+int main(void)
 {
-	char letter = 'a';
+	char text[] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
 
-	while (letter <= 'z')
+	for (i = 0; i < 25; i++)
 	{
-		_putchar("%s",letter);
-		letter++;
+		putchar(text[i]);
 	}
 
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
