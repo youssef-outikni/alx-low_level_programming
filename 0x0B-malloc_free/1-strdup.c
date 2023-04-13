@@ -3,6 +3,25 @@
 #include "main.h"
 
 /**
+ * sizer -  calculate size of c.
+ * @str: input value
+ *
+ * Return: int
+ */
+
+int sizer(char *str)
+{
+	int i = 0;
+
+	while (*str != '\0')
+	{
+		i++;
+		str++;
+	}
+	return (i);
+}
+
+/**
  * _strdup -  creates an array.
  * @str: input value
  *
@@ -11,21 +30,19 @@
 
 char *_strdup(char *str)
 {
-	char *text;
+	int size = sizer(str) * sizeof(char);
+	char *text = (char *)malloc(size);
+	int i;
 
-	if (str == NULL)
+	if (str == NULL && text == NULL)
 	{
 		return (NULL);
 	}
-	text = (char *) malloc(sizeof(str));
-	if (text != NULL)
+	for (i = 0; i < size; i++)
 	{
-		while (*str != '\0')
-		{
-			*text = *str;
-			str++;
-			text++;
-		}
+		text[i] = str[i];
 	}
 	return (text);
 }
+
+
