@@ -40,11 +40,11 @@ char *_strdup(char *str)
 	}
 	size = sizer(str) * sizeof(char);
 	text = (char *)malloc(size);
-	if (str == NULL && text == NULL)
+	if (text == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size  + 1; i++)
+	for (i = 0; i < size; i++)
 	{
 		text[i] = str[i];
 	}
