@@ -38,14 +38,14 @@ char *str_concat(char *s1, char *s2)
 	int size1;
 	int size2;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
 	}
 	size1 = sizer(s1);
 	size2 = sizer(s2);
 	size = size1 + size2;
-	text = (char *)malloc(size * sizeof(char));
+	text = (char *)malloc(size * sizeof(char) + 1);
 	if (text == NULL)
 	{
 		return (NULL);
