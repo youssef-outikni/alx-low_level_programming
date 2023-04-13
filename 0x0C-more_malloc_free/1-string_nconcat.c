@@ -47,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	size1 = sizer(s1);
-	if (sizer(s2) < n)
+	if ((unsigned int) sizer(s2) < n)
 	{
 		n = sizer(s2);
 	}
