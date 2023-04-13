@@ -30,10 +30,16 @@ int sizer(char *str)
 
 char *_strdup(char *str)
 {
-	int size = sizer(str) * sizeof(char);
-	char *text = (char *)malloc(size);
 	int i;
+	int size;
+	char *text;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	size = sizer(str) * sizeof(char);
+	*text = (char *)malloc(size);
 	if (str == NULL && text == NULL)
 	{
 		return (NULL);
