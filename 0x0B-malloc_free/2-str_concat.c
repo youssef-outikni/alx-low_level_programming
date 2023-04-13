@@ -52,9 +52,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	i = 0;
 	j = 0;
-	while (++i < size1)
+	while (i < size1)
 	{
 		text[i] = s1[i];
+		i++;
 	}
 	while (i < size)
 	{
