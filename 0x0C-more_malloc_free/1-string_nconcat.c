@@ -42,9 +42,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *text;
 	int size1;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 	size1 = sizer(s1);
 	if ((unsigned int) sizer(s2) < n)
