@@ -38,20 +38,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i;
 	int j;
+	int size1 = sizer(s1);
+	int size1 = size(s2);
 	int size;
 	char *text;
-	int size1;
-	
-	size1 = sizer(s1);
-	if ((unsigned int) sizer(s2) < n)
+
+	if (s1 == NULL)
 	{
-		n = sizer(s2);
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	if ((unsigned int) sizer(s2) <= n)
+	{
+		n = size2;
 	}
 	size = size1 + n;
-	if (size == 0)
-	{
-		return (NULL);
-	}
 	text = (char *)malloc(size * sizeof(char) + 1);
 	if (text == NULL)
 	{
