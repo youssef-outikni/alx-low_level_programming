@@ -12,18 +12,13 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int i = 0;
-	void *text
 	if (nmemb == 0 && size == 0)
 	{
 		return (NULL);
 	}
-	text =  malloc(nmemb * size);
-	while (i < nmemb * size)
+	if (malloc(nmemb * size) != NULL)
 	{
-		text[i] = '\0';
-		i++;
+		return (malloc(nmemb * size));
 	}
+	return (NULL);
 }
-
-
