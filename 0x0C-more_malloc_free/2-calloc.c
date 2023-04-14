@@ -4,7 +4,7 @@
 
 /**
  * _calloc -  calculate size of c.
- * @memb: input value
+ * @nmemb: input value
  * @size: input value
  *
  * Return: void
@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *result;
 	unsigned int i = 0;
 
-	if (nmemb == 0 && size == 0)
+	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
