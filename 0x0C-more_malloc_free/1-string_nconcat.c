@@ -36,11 +36,7 @@ int sizer(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
-	int j;
-	int size1 = sizer(s1);
-	int size2 = sizer(s2);
-	int size;
+	int i, j, size1, size2, size;
 	char *text;
 
 	if (s1 == NULL)
@@ -56,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = size2;
 	}
 	size = size1 + n;
-	text = (char *)malloc(size * sizeof(char) + 1);
+	text = (char *)malloc(size1 * sizeof(char) + n + 1);
 	if (text == NULL)
 	{
 		return (NULL);
