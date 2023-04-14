@@ -12,13 +12,23 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	char *result;
+	unsigned int i = 0;
+
 	if (nmemb == 0 && size == 0)
 	{
 		return (NULL);
 	}
-	if (malloc(nmemb * size) != NULL)
+	result = (char *) malloc(nmemb * size);
+
+	if (result == NULL)
 	{
-		return (malloc(nmemb * size));
+		return (NULL);
 	}
-	return (NULL);
+	while (i < (nmemb * size))
+	{
+		result[i] = '\0';
+		i++;
+	}
+	return (result);
 }
