@@ -44,11 +44,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = '';
+		size1 = 0;
 	}
 	if (s2 == NULL)
 	{
-		s2 = '';
+		n = 0;
 	}
 	size1 = sizer(s1);
 	if ((unsigned int) sizer(s2) < n)
