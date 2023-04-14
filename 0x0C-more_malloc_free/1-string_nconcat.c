@@ -41,21 +41,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int size;
 	char *text;
 	int size1;
-
-	if (s1 == NULL)
-	{
-		size1 = 0;
-	}
-	if (s2 == NULL)
-	{
-		n = 0;
-	}
+	
 	size1 = sizer(s1);
 	if ((unsigned int) sizer(s2) < n)
 	{
 		n = sizer(s2);
 	}
 	size = size1 + n;
+	if (size == 0)
+	{
+		return (NULL);
+	}
 	text = (char *)malloc(size * sizeof(char) + 1);
 	if (text == NULL)
 	{
