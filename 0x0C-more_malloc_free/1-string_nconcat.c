@@ -36,7 +36,7 @@ int sizer(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, size1, size2;
+	int i, j, size1 = sizer(s1), size2 = sizer(s2);
 	char *text;
 
 	if (s1 == NULL)
