@@ -36,7 +36,7 @@ int sizer(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, size1 = sizer(s1), size2 = sizer(s2);
+	unsigned int i, j, size1 = sizer(s1), size2 = sizer(s2);
 	char *text;
 
 	if (s1 == NULL)
@@ -56,17 +56,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 		text[i] = s1[i];
+	}
+	for (j = 0; j < n; j++)
+	{
+		text[i] = s2[j];
 		i++;
 	}
-	while (s2[j] != '\0')
-	{
-		text[i++] = s2[j++];
-	}
+	text[i] = '\0';
 	return (text);
 }
 
