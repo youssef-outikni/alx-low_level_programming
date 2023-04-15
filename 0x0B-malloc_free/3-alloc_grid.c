@@ -35,20 +35,29 @@ int sizer(char *str)
 
 int **alloc_grid(int width, int height)
 {	int **result;
-	int i;
-
+	int i = 0;
+	int j = 0;
 	if (width == 0 || height == 0)
 	{
 		return (NULL);
 	}
-	result = (int *)malloc(width * height  * sizeof(int) + 1);
+	result = malloc(width *  sizeof(int));
 	if (result == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < (width * height); i++)
+	for (i = 0; i < height; i++)
 	{
-		result[i] = 0;
+		result[i] = malloc(height * sizeof(int));
+		if (result[i])
+		{
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+		{
+			result[i][j] = 0;
+		}
+		j = 0;
 	}
 	return (result);
 }
