@@ -13,6 +13,10 @@ int sizer(char *str)
 {
 	int i = 0;
 
+	if (str == NULL)
+	{
+		return (0);
+	}
 	while (*str != '\0')
 	{
 		i++;
@@ -38,9 +42,13 @@ char *str_concat(char *s1, char *s2)
 	int size1;
 	int size2;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 	size1 = sizer(s1);
 	size2 = sizer(s2);
@@ -50,16 +58,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	i = 0;
-	j = 0;
-	while (i < size1)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 		text[i] = s1[i];
-		i++;
 	}
-	while (i < size)
+	for (j = 0; s2[j] != '\0'; j++)
 	{
-		text[i++] = s2[j++];
+		text[i] = s2[j];
+		i++;
 	}
 	return (text);
 }
