@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * print_name - prints name
  * @name: input
@@ -9,7 +10,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (!f || ! name)
+	if (f && name)
 	{
 		f(name);
 	}
