@@ -3,9 +3,10 @@
 
 /**
  * get_op_func - the the function of opperation
+ *
  * @s: the peration char.
- * 
- * Return : pointer to the function
+ *
+ * Return: pointer to the function
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -20,9 +21,9 @@ int (*get_op_func(char *s))(int, int)
 	int i = 0;
 
 	while (i < 5 && *(ops[i].op) != *s)
-		{
-			i++;
-		}
+	{
+		i++;
+	}
 	return (ops[i].f);
 }
 
