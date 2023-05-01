@@ -11,8 +11,8 @@
 size_t print_list(const list_t *h)
 {
 	size_t item = 0;
-
-	while (h)
+	
+	while (h->next)
 	{
 		if (h->str)
 		{
