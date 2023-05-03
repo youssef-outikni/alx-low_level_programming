@@ -19,10 +19,10 @@ void puts2(char *str)
 		s++;
 		i++;
 	}
-	stg = i-1;
-	for (a = 0; a < stg; a++)
+	stg = i - 1;
+	for (a = 0; a <= stg; a++)
 	{
-		if (a%2 == 0)
+		if (a % 2 == 0)
 		{
 			_putchar(str[a]);
 		}
