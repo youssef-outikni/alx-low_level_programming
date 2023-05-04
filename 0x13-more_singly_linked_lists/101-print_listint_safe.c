@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 size_t loop_len(const listint_t *head);
-size_t print_safe(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
 
 /**
  * loop_len - Counts the number of unique nodes
@@ -54,12 +54,12 @@ size_t loop_len(const listint_t *head)
 }
 
 /**
- * print_safe - Prints a listint_t list safely.
+ * print_listint_safe - Prints a listint_t list safely.
  * @head: A pointer to the head of the listint_t list.
  *
  * Return: The number of nodes in the list.
  */
-size_t print_safe(const listint_t *head)
+size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes, index = 0;
 
